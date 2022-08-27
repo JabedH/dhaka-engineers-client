@@ -59,11 +59,10 @@ const Navbar = () => {
             <img src={logo} alt="" />
           </Link>
         </div>
-
         <div class="navbar-end hidden lg:flex ">
           <ul class="menu menu-horizontal p-0 flex gap-2  lg:text-white">
             <li>
-              <NavLink NavLink to={"/"} class="btn btn-ghost">
+              <NavLink to={"/"} class="btn btn-ghost">
                 Home
               </NavLink>
             </li>

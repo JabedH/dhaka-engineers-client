@@ -8,13 +8,22 @@ import Services from "./Components/Services/Services";
 import Courses from "./Components/Courses/Courses";
 import Blog from "./Components/Blog/Blog";
 import Contact from "./Components/Contact/Contact";
+import Showall from "./Components/Home/LatestProjects/Showall";
+import Interior from "./Components/Home/LatestProjects/Interior";
+import Exterior from "./Components/Home/LatestProjects/Exterior";
+import Commercial from "./Components/Home/LatestProjects/Commercial";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home />}>
+          <Route path="/showall" element={<Showall />} />
+          <Route path="/interior" element={<Interior />} />
+          <Route path="/exterior" element={<Exterior />} />
+          <Route path="/commercial" element={<Commercial />} />
+        </Route>
         <Route path="/services" element={<Services />} />
         <Route path="/whyus" element={<Whyus />} />
         <Route path="/courses" element={<Courses />} />
