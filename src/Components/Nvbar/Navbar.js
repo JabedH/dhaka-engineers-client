@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import logo from "../../Asset/img/logo/whitelogo.png";
 
 const Navbar = () => {
   return (
@@ -50,30 +52,45 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <a class="btn btn-ghost normal-case text-xl text-white">
-            Dhaka Engineers
-          </a>
+          <Link
+            to="/"
+            class=" w-44 btn btn-ghost normal-case text-xl text-white"
+          >
+            <img src={logo} alt="" />
+          </Link>
         </div>
 
         <div class="navbar-end hidden lg:flex ">
           <ul class="menu menu-horizontal p-0  lg:text-white">
             <li>
-              <a class="btn btn-ghost ">Home</a>
+              <Link to={"/"} class="btn btn-ghost ">
+                Home
+              </Link>
             </li>
             <li>
-              <a class="btn btn-ghost ">services</a>
+              <Link to="services" class="btn btn-ghost ">
+                services
+              </Link>
             </li>
             <li>
-              <a class="btn btn-ghost ">WHY US</a>
+              <Link to="whyus" class="btn btn-ghost ">
+                WHY US
+              </Link>
             </li>
             <li>
-              <a class="btn btn-ghost ">COURSES</a>
+              <Link to="courses" class="btn btn-ghost ">
+                COURSES
+              </Link>
             </li>
             <li>
-              <a class="btn btn-ghost ">BLOG</a>
+              <Link to="blog" class="btn btn-ghost ">
+                BLOG
+              </Link>
             </li>
             <li>
-              <a class="btn btn-ghost ">CONTACT</a>
+              <Link to="contact" class="btn btn-ghost ">
+                CONTACT
+              </Link>
             </li>
           </ul>
         </div>

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Contract = () => {
+const Contact = () => {
   return (
     <div>
       <h1>this is contact</h1>
@@ -8,4 +8,4 @@ const Contract = () => {
   );
 };
 
-export default Contract;
+export default Contact;
