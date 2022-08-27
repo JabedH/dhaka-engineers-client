@@ -1,0 +1,61 @@
+.latest-project h5 {
+  margin: 0 20px;
+}
+.my-projects {
+  background-color: #243046;
+  color: white;
+}
+.my-projects h2 {
+  padding: 50px 0 30px 0;
+}
+.latest-project ::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: #f44336;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.latest-project h5:hover::after {
+  width: 100%;
+}
+.latest-img {
+  /* display: grid;
+  grid-template-columns: repeat(3, 1fr); */
+}
+.latest-img img {
+  width: 100%;
+}
+/*  */
+.latest-text {
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+.latest-text:hover {
+  background: rgba(177, 172, 172, 0.301);
+}
+.latest-col {
+  position: relative;
+  overflow: hidden;
+}
+.latest-text h3 {
+  width: 100%;
+  font-weight: 500;
+  color: #fff;
+  font-size: 26px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  transition: 0.5s;
+}
+.latest-text:hover h3 {
+  bottom: 49%;
+  opacity: 1;
+}
