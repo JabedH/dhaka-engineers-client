@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../../Asset/img/logo/whitelogo.png";
 
 const Navbar = () => {
@@ -42,7 +42,7 @@ const Navbar = () => {
                 <a class="btn btn-ghost ">WHY US</a>
               </li>
               <li>
-                <a class="btn btn-ghost ">COURSES</a>
+                <a class="btn btn-ghost  ">COURSES</a>
               </li>
               <li>
                 <a class="btn btn-ghost ">BLOG</a>
@@ -61,36 +61,36 @@ const Navbar = () => {
         </div>
 
         <div class="navbar-end hidden lg:flex ">
-          <ul class="menu menu-horizontal p-0  lg:text-white">
+          <ul class="menu menu-horizontal p-0 flex gap-2  lg:text-white">
             <li>
-              <Link to={"/"} class="btn btn-ghost ">
+              <NavLink NavLink to={"/"} class="btn btn-ghost">
                 Home
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="services" class="btn btn-ghost ">
+              <NavLink to="services" class="btn btn-ghost">
                 services
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="whyus" class="btn btn-ghost ">
+              <NavLink to="whyus" class="btn btn-ghost">
                 WHY US
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="courses" class="btn btn-ghost ">
+              <NavLink to="courses" class="btn btn-ghost ">
                 COURSES
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="blog" class="btn btn-ghost ">
+              <NavLink to="blog" class="btn btn-ghost ">
                 BLOG
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to="contact" class="btn btn-ghost ">
+              <NavLink to="contact" class="btn btn-ghost ">
                 CONTACT
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>
