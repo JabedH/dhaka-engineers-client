@@ -3,7 +3,7 @@ import React from "react";
 const Navbar = () => {
   return (
     <div>
-      <div class="navbar bg-slate-500 lg:text-white">
+      <div class="navbar bg-slate-500 ">
         <div class="navbar-start">
           <div class="dropdown">
             <label
@@ -56,7 +56,7 @@ const Navbar = () => {
         </div>
 
         <div class="navbar-end hidden lg:flex ">
-          <ul class="menu menu-horizontal p-0 ">
+          <ul class="menu menu-horizontal p-0  lg:text-white">
             <li>
               <a class="btn btn-ghost ">Home</a>
             </li>
@@ -83,7 +83,7 @@ const Navbar = () => {
         <div class="flex-none">
           <div class="dropdown dropdown-end">
             <label tabindex="0" class="btn btn-ghost btn-circle">
-              <div class="indicator">
+              <div class="indicator lg:text-white">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="h-5 w-5"
@@ -105,8 +105,8 @@ const Navbar = () => {
               tabindex="0"
               class="mt-3 card card-compact dropdown-content w-52 bg-base-100 shadow"
             >
-              <div class="card-body">
-                <span class="font-bold text-lg">8 Items</span>
+              <div class="card-body bg-base-100">
+                <span class="font-bold text-lg ">8 Items</span>
                 <span class="text-info">Subtotal: $999</span>
                 <div class="card-actions">
                   <button class="btn btn-primary btn-block">View cart</button>
