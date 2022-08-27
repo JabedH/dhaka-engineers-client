@@ -9,7 +9,7 @@ const LatestProjects = () => {
       <h2 className="text-2xl font-bold">LATEST PROJECTS</h2>
       <div className="">
         <div className="  ">
-          <ul className="menu menu-horizontal gap-5 border-b-4  border-[#fbbf24]">
+          <ul className="menu lg:menu-horizontal lg:gap-5  grid grid-cols-2 justify-items-center  border-b-4  border-[#fbbf24]">
             <li className="">
               <NavLink to="/showall">Showall</NavLink>
             </li>
