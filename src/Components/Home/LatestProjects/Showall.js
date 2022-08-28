@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import p1 from "../../../Asset/img/latestProjects/p-2.jpg";
 import p2 from "../../../Asset/img/latestProjects/ex.jpg";
 import p3 from "../../../Asset/img/latestProjects/p-2.jpg";
@@ -9,33 +9,79 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper";
+import Interior from "./Interior";
 
 const Showall = () => {
+  const showall = [
+    {
+      img: require("../../../Asset/img/latestProjects/e1.jpg"),
+      name: "EXTERIOR DESIGN",
+    },
+    {
+      img: require("../../../Asset/img/latestProjects/e2.jpg"),
+      name: "EXTERIOR DESIGN",
+    },
+    {
+      img: require("../../../Asset/img/latestProjects/e3.jpg"),
+      name: "EXTERIOR DESIGN",
+    },
+    {
+      img: require("../../../Asset/img/latestProjects/e4.jpg"),
+      name: " COMMERCIAL BUILDING",
+    },
+    {
+      img: require("../../../Asset/img/latestProjects/e5.jpg"),
+      name: "COMMERCIAL BUILDING",
+    },
+    {
+      img: require("../../../Asset/img/latestProjects/e6.jpg"),
+      name: " COMMERCIAL BUILDING",
+    },
+    {
+      img: require("../../../Asset/img/latestProjects/e7.jpg"),
+      name: " COMMERCIAL BUILDING",
+    },
+    {
+      img: require("../../../Asset/img/latestProjects/ex.jpg"),
+      name: " COMMERCIAL BUILDING",
+    },
+    {
+      img: require("../../../Asset/img/latestProjects/i1.jpg"),
+      name: "INTERIOR DESIGN",
+    },
+    {
+      img: require("../../../Asset/img/latestProjects/i2.jpg"),
+      name: "INTERIOR DESIGN",
+    },
+    {
+      img: require("../../../Asset/img/latestProjects/i3.jpg"),
+      name: "INTERIOR DESIGN",
+    },
+    {
+      img: require("../../../Asset/img/latestProjects/i4.jpg"),
+      name: "INTERIOR DESIGN",
+    },
+    {
+      img: require("../../../Asset/img/latestProjects/i5.jpg"),
+      name: "INTERIOR DESIGN",
+    },
+    {
+      img: require("../../../Asset/img/latestProjects/i6.jpg"),
+      name: "INTERIOR DESIGN",
+    },
+  ];
+
+  // const [shaowall, setShow] = useState([]);
+  // console.log(shaowall);
+  // useEffect(() => {
+  //   fetch("Showall.json")
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setShow(data);
+  //     });
+  // }, []);
   return (
     <div>
-      {/* <div>
-        <div className="grid justify-items-center lg:grid-cols-3 ">
-          <div className="latest-col">
-            <img src={p3} alt="" />
-            <div className="latest-text ">
-              <h3 className="border">INTERIOR DESIGN</h3>
-            </div>
-          </div>
-          <div className="latest-col">
-            <img src={p2} alt="" />
-            <div className="latest-text">
-              <h3 className="border">EXTERIOR DESIGN</h3>
-            </div>
-          </div>
-          <div className="latest-col">
-            <img src={p4} alt="" />
-            <div className="latest-text">
-              <h3 className="border">INTERIOR DESIGN</h3>
-            </div>
-          </div>
-        </div>
-      </div> */}
-      {/* <Swiper watchSlidesProgress={true} slidesPerView={3} className="mySwiper"> */}
       <Swiper
         slidesPerView={3}
         loop={true}
@@ -47,38 +93,16 @@ const Showall = () => {
         modules={[Pagination, Navigation]}
         className="mySwiper "
       >
-        <SwiperSlide>
-          <div className="latest-col">
-            <img src={p3} alt="" />
-            <div className="latest-text ">
-              <h3 className="border">INTERIOR DESIGN</h3>
+        {showall.map((show) => (
+          <SwiperSlide>
+            <div className="latest-col">
+              <img src={show.img} alt="" />
+              <div className="latest-text ">
+                <h3 className="border">{show.name}</h3>
+              </div>
             </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          {" "}
-          <div className="latest-col">
-            <img src={p3} alt="" />
-            <div className="latest-text ">
-              <h3 className="border">INTERIOR DESIGN</h3>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          {" "}
-          <div className="latest-col">
-            <img src={p3} alt="" />
-            <div className="latest-text ">
-              <h3 className="border">INTERIOR DESIGN</h3>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );

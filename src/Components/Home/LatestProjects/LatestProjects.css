@@ -47,7 +47,7 @@
 .latest-text h3 {
   width: 100%;
   font-weight: 500;
-  color: #fff;
+  color: #fbbf24;
   font-size: 26px;
   bottom: 0;
   left: 50%;
@@ -58,4 +58,22 @@
 .latest-text:hover h3 {
   bottom: 49%;
   opacity: 1;
+}
+
+@media only screen and (max-width: 680px) {
+  .latest-text h3 {
+    width: 100%;
+    font-weight: 600;
+    color: #fbbf24;
+    font-size: 12px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    transition: 0.5s;
+  }
+  .latest-text:hover h3 {
+    bottom: 49%;
+    opacity: 1;
+  }
 }
