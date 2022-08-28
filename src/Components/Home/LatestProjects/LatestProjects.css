@@ -59,7 +59,9 @@
   bottom: 49%;
   opacity: 1;
 }
-
+.boxShadow {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
 @media only screen and (max-width: 680px) {
   .latest-text h3 {
     width: 100%;

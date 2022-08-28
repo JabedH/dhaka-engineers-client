@@ -19,7 +19,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />}>
-          <Route path="/showall" element={<Showall />} />
+          <Route path="/" element={<Showall />} />
           <Route path="/interior" element={<Interior />} />
           <Route path="/exterior" element={<Exterior />} />
           <Route path="/commercial" element={<Commercial />} />
