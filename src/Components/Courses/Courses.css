@@ -1,0 +1,9 @@
+.mybg {
+  background-image: url("../../Asset/img/course/tc1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 80vh;
+}
+.myMargin {
+  margin-top: -50px;
+}

@@ -8,7 +8,7 @@ import Whatwedo from "./WhatWeDo.js/Whatwedo";
 const Home = () => {
   return (
     <div>
-      {/* <Slide /> */}
+      <Slide />
       <Whatwedo />
       <LatestProjects />
       <HappyClients />

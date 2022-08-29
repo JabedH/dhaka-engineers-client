@@ -9,58 +9,39 @@ import e1 from "../../../Asset/img/latestProjects/e1.jpg";
 import e2 from "../../../Asset/img/latestProjects/e2.jpg";
 import e3 from "../../../Asset/img/latestProjects/e3.jpg";
 import e4 from "../../../Asset/img/latestProjects/e4.jpg";
+import { NavLink } from "react-router-dom";
 
 const Exterior = () => {
   return (
-    <>
-      <Swiper
-        slidesPerView={3}
-        loop={true}
-        loopFillGroupWithBlank={true}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[Pagination, Navigation]}
-        className="mySwiper "
-      >
-        <SwiperSlide>
-          <div className="latest-col">
-            <img src={e1} alt="" />
-            <div className="latest-text ">
-              <h3 className="border">INTERIOR DESIGN</h3>
-            </div>
+    <div>
+      <div className="grid lg:grid-cols-3 grid-cols-2 lg:px-11 px-3">
+        <div className="latest-col">
+          <img src={e1} alt="" />
+          <div className="latest-text ">
+            <h3 className="border">INTERIOR DESIGN</h3>
           </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          {" "}
-          <div className="latest-col">
-            <img src={e2} alt="" />
-            <div className="latest-text ">
-              <h3 className="border">INTERIOR DESIGN</h3>
-            </div>
+        </div>{" "}
+        <div className="latest-col">
+          <img src={e2} alt="" />
+          <div className="latest-text ">
+            <h3 className="border">INTERIOR DESIGN</h3>
           </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          {" "}
-          <div className="latest-col">
-            <img src={e3} alt="" />
-            <div className="latest-text ">
-              <h3 className="border">INTERIOR DESIGN</h3>
-            </div>
+        </div>{" "}
+        <div className="latest-col">
+          <img src={e3} alt="" />
+          <div className="latest-text ">
+            <h3 className="border">INTERIOR DESIGN</h3>
           </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          {" "}
-          <div className="latest-col">
-            <img src={e4} alt="" />
-            <div className="latest-text ">
-              <h3 className="border">INTERIOR DESIGN</h3>
-            </div>
-          </div>
-        </SwiperSlide>
-      </Swiper>
-    </>
+        </div>{" "}
+      </div>
+      <ul>
+        <li className="mt-10 pb-10">
+          <NavLink to="/viewall" className="btn btn-primary">
+            View All Projects
+          </NavLink>
+        </li>
+      </ul>
+    </div>
   );
 };
 

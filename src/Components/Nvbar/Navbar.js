@@ -5,7 +5,7 @@ import logo from "../../Asset/img/logo/whitelogo.png";
 const Navbar = () => {
   return (
     <div>
-      <div class="navbar bg-slate-500 ">
+      <div class="navbar bg-gray-500 ">
         <div class="navbar-start">
           <div class="dropdown">
             <label
@@ -63,17 +63,17 @@ const Navbar = () => {
           <ul class="menu menu-horizontal p-0 flex gap-2  lg:text-white">
             <li>
               <NavLink to={"/"} class="btn btn-ghost">
-                Home
+                HOME
               </NavLink>
             </li>
             <li>
               <NavLink to="services" class="btn btn-ghost">
-                services
+                SERVICES
               </NavLink>
             </li>
             <li>
               <NavLink to="whyus" class="btn btn-ghost">
-                WHY US
+                WHYUS
               </NavLink>
             </li>
             <li>

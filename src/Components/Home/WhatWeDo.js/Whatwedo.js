@@ -65,12 +65,12 @@ const Whatwedo = () => {
   return (
     <div className="">
       <div className=" my-14">
-        <div className=" border-b-2   border-[#fbbf24] mb-5">
+        <div className=" border-b-2 border-[#fbbf24] mb-5">
           <h3 className="  text-2xl font-bold mb-3">WHAT WE DO</h3>
         </div>
-        <div className="grid lg:grid-cols-3 grid-cols-2 gap-5 px-11 ">
+        <div className="grid lg:grid-cols-3 grid-cols-2 lg:gap-5 gap-3  lg:px-11 px-5 ">
           {Wedo.map((data) => (
-            <div className="flex items-center gap-5 text-start">
+            <div className="flex items-center lg:gap-5 gap-3 text-start">
               <img
                 className="border rounded-full p-2 boxShadow lg:w-14 w-10"
                 src={data.img}
