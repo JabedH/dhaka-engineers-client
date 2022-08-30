@@ -1,74 +1,86 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import { Link, NavLink, Outlet } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import RegistrationModal from "./RegistrationModal";
 const Registration = () => {
-  // const [name, setName] = useState(" ");
-  // const [number, setNumber] = useState(" ");
-  // const [email, setEmail] = useState(" ");
+  const [openModal, setOpenModal] = useState(false);
+
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-    console.log(data);
-  };
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   // console.log(name, number, email);
-  //   const name = e.target.name.value;
-  //   const number = e.target.number.value;
-  //   const email = e.target.email.value;
-  //   const nid = e.target.nid.value;
-  //   const institute = e.target.institute.value;
-  //   const year = e.target.year.value;
-  //   const present = e.target.present.value;
-  //   const permanent = e.target.permanent.value;
-  //   console.log(name, number, email, nid, institute, year, present, permanent);
-  //   const AllData = {
-  //     // name,
-  //     // number,
-  //     // email,
-  //     name,
-  //     number,
-  //     email,
-  //     nid,
-  //     institute,
-  //     year,
-  //     present,
-  //     permanent,
-  //   };
+    const name = data.name;
+    const number = data.number;
+    const email = data.email;
+    const nid = data.nid;
+    const institute = data.institute;
+    const year = data.year;
+    const present = data.present;
+    const permanent = data.permanent;
+    const bkash = data.bkash;
+    const transaction = data.transaction;
+    console.log(
+      name,
+      number,
+      email,
+      nid,
+      institute,
+      year,
+      present,
+      permanent,
+      bkash,
+      transaction
+    );
+    const AllData = {
+      name,
+      number,
+      email,
+      nid,
+      institute,
+      year,
+      present,
+      permanent,
+      bkash,
+      transaction,
+    };
 
-  //   axios({
-  //     method: "POST",
-  //     headers: {
-  //       // authorization
-  //     },
-  //     url: "https://sheet.best/api/sheets/a8933537-2e91-4c0e-8202-7bbb73395c97",
-  //     data: AllData,
-  //   })
-  //     .then((res) => {
-  //       if (res.status === 200) {
-  //         toast.success("Event created successfully");
-  //       }
-  //       console.log(res);
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     });
-  // };
+    axios({
+      method: "POST",
+      headers: {
+        // authorization
+      },
+      url: "https://sheet.best/api/sheets/a8933537-2e91-4c0e-8202-7bbb73395c97",
+      data: AllData,
+    })
+      .then((res) => {
+        if (res.status === 200) {
+          toast.success("Registration Successful");
+        }
+        if (res.status === 200) {
+          <label for="my-modal-5" class="btn modal-button">
+            open modal
+          </label>;
+        }
+        console.log(res);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   return (
-    <div>
+    <div className="lg:mx-20">
       <form onSubmit={handleSubmit(onSubmit)} action="">
         <div className="card-body grid lg:grid-cols-2 ">
           <div class="form-control">
             <label class="label">
               <span class="label-text">Name</span>
             </label>
+
             <input
               type="text"
               placeholder="Type Name"
@@ -226,7 +238,7 @@ const Registration = () => {
               type="text"
               placeholder="Type your present address"
               class="input input-bordered"
-              {...register("text", {
+              {...register("present", {
                 required: {
                   value: true,
                   message: "Please provide your present address",
@@ -234,9 +246,9 @@ const Registration = () => {
               })}
             />
             <label class="label">
-              {errors.text?.type === "required" && (
+              {errors.present?.type === "required" && (
                 <span class="label-text-alt text-red-500">
-                  {errors.text.message}
+                  {errors.present.message}
                 </span>
               )}
             </label>
@@ -249,7 +261,7 @@ const Registration = () => {
               type="text"
               placeholder="Type your permanent address"
               class="input input-bordered"
-              {...register("text", {
+              {...register("permanent", {
                 required: {
                   value: true,
                   message: "Please provide your permanent address",
@@ -257,9 +269,9 @@ const Registration = () => {
               })}
             />
             <label class="label">
-              {errors.text?.type === "required" && (
+              {errors.permanent?.type === "required" && (
                 <span class="label-text-alt text-red-500">
-                  {errors.text.message}
+                  {errors.permanent.message}
                 </span>
               )}
             </label>
@@ -339,8 +351,27 @@ const Registration = () => {
             </label>
           </div>
         </div>
-        <div class="form-control mt-6">
-          <button class="btn btn-primary">Signup</button>
+        <button for="my-modal-5" class="btn btn-wide mb-10 bg-[#eaad00]">
+          Submit
+        </button>
+        <div>
+          <input type="checkbox" id="my-modal-5" class="modal-toggle" />
+          <div class="modal">
+            <div class="modal-box w-11/12 max-w-5xl">
+              <h3 class="font-bold text-lg">
+                Congratulations random Internet user!
+              </h3>
+              <p class="py-4">
+                You've been selected for a chance to get one year of
+                subscription to use Wikipedia for free!
+              </p>
+              <div class="modal-action">
+                <label for="my-modal-5" class="btn">
+                  Yay!
+                </label>
+              </div>
+            </div>
+          </div>
         </div>
       </form>
     </div>

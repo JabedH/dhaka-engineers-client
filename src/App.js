@@ -33,8 +33,8 @@ function App() {
         </Route>
         <Route path="/viewall" element={<Viewall />} />
         <Route path="/courses" element={<Courses />}></Route>
-        {/* <Route path="/regi" element={<Form />} />
-          <Route path="/payment" element={<Payment />} />{" "} */}
+        <Route path="/form" element={<Form />} />
+        {/* <Route path="/payment" element={<Payment />} />{" "}  */}
         <Route path="/course/registration" element={<Registration />}></Route>
 
         <Route path="/services" element={<Services />} />

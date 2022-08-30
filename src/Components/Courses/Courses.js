@@ -10,6 +10,7 @@ import {
   faRegistered,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import Learnfrom from "./Learnfrom/Learnfrom";
 
 const Courses = () => {
   return (
@@ -78,6 +79,7 @@ const Courses = () => {
           </div>
         </div>
       </div>
+      <Learnfrom />
     </div>
   );
 };
