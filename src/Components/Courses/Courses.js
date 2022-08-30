@@ -9,6 +9,7 @@ import {
   faDesktop,
   faRegistered,
 } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const Courses = () => {
   return (
@@ -71,7 +72,9 @@ const Courses = () => {
             <h3 className="text-white font-bold">
               পরবর্তী ব্যাচে এনরোল করতে আগ্রহি হলে রেজিস্ট্রেশন করে রাখোন
             </h3>
-            <button className="btn ">Registration Now</button>
+            <Link to="/course/registration" className="btn ">
+              Registration Now
+            </Link>
           </div>
         </div>
       </div>
